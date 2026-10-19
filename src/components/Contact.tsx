@@ -12,7 +12,9 @@ export default function Contact() {
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       alert("Please fill in all required fields.");
@@ -20,11 +22,39 @@ export default function Contact() {
     }
 
     setStatus("submitting");
+    setErrorMessage("");
 
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", projectType: "Business Website", message: "" });
-    }, 800);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/meetbhandaridev@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          projectType: formData.projectType,
+          message: formData.message,
+          _subject: `New Portfolio Inquiry from ${formData.name} - [${formData.projectType}]`,
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok || result.success === "true" || result.success === true) {
+        setStatus("success");
+        setFormData({ name: "", email: "", projectType: "Business Website", message: "" });
+      } else {
+        throw new Error(result.message || "Something went wrong while sending the message.");
+      }
+    } catch (err: unknown) {
+      console.error("Form submission error:", err);
+      setStatus("error");
+      setErrorMessage("Could not send message automatically. Please try again or email directly to meetbhandaridev@gmail.com");
+    }
   };
 
   return (
@@ -126,13 +156,32 @@ export default function Contact() {
                 ></textarea>
               </div>
 
+              {status === "error" && (
+                <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg text-sm text-red-700">
+                  <p className="font-bold">⚠️ Submission failed</p>
+                  <p className="mt-1">{errorMessage}</p>
+                </div>
+              )}
+
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full inline-flex items-center justify-center px-6 py-4 text-base font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg transition-all disabled:opacity-50 shadow-md"
+                className="w-full inline-flex items-center justify-center px-6 py-4 text-base font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg transition-all disabled:opacity-50 shadow-md cursor-pointer"
               >
                 {status === "submitting" ? "SENDING MESSAGE..." : "SEND PROJECT INQUIRY →"}
               </button>
+
+              <div className="text-center pt-2">
+                <p className="text-xs sm:text-sm text-[#64748B] font-medium">
+                  Prefer direct email?{" "}
+                  <a
+                    href="mailto:meetbhandaridev@gmail.com"
+                    className="text-[#1D4ED8] font-bold hover:underline"
+                  >
+                    meetbhandaridev@gmail.com
+                  </a>
+                </p>
+              </div>
             </form>
           )}
         </div>

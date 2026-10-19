@@ -26,6 +26,12 @@ export default function Footer() {
           >
             LinkedIn
           </a>
+          <a
+            href="mailto:meetbhandaridev@gmail.com"
+            className="hover:text-[#1D4ED8] transition-colors font-semibold text-[#0F172A]"
+          >
+            meetbhandaridev@gmail.com
+          </a>
           <Link href="#contact" className="hover:text-[#0F172A] transition-colors">
             Contact
           </Link>

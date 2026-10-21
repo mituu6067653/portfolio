@@ -61,8 +61,8 @@ export default function Contact() {
     <section id="contact" className="py-12 sm:py-20 lg:py-28 bg-[#F8FAFC] border-t border-[#CBD5E1]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">
-            Get In Touch
+          <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
+            Get in Touch
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
             Have a project in mind? Let's talk.
@@ -94,8 +94,8 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5 sm:mb-2">
-                    YOUR NAME *
+                  <label htmlFor="name" className="block text-xs font-bold text-[#0F172A] mb-1.5 sm:mb-2">
+                    Your Name *
                   </label>
                   <input
                     type="text"
@@ -109,8 +109,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5 sm:mb-2">
-                    EMAIL ADDRESS *
+                  <label htmlFor="email" className="block text-xs font-bold text-[#0F172A] mb-1.5 sm:mb-2">
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -125,8 +125,8 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="projectType" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5 sm:mb-2">
-                  PROJECT TYPE
+                <label htmlFor="projectType" className="block text-xs font-bold text-[#0F172A] mb-1.5 sm:mb-2">
+                  Project Type
                 </label>
                 <select
                   id="projectType"
@@ -142,8 +142,8 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5 sm:mb-2">
-                  PROJECT DETAILS *
+                <label htmlFor="message" className="block text-xs font-bold text-[#0F172A] mb-1.5 sm:mb-2">
+                  Project Details *
                 </label>
                 <textarea
                   id="message"

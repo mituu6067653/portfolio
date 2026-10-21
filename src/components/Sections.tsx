@@ -28,7 +28,7 @@ export function Services() {
   return (
     <section id="services" className="py-12 sm:py-20 lg:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mb-8 sm:mb-14">
-        <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">
+        <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
           Capabilities
         </span>
         <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
@@ -60,7 +60,7 @@ export function Services() {
             </div>
 
             <div className="pt-4 sm:pt-6 border-t border-[#CBD5E1]">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2 sm:mb-3">
+              <h4 className="text-xs font-bold text-[#64748B] mb-2 sm:mb-3">
                 Expected Outcomes
               </h4>
               <ul className="space-y-2 text-sm sm:text-base font-semibold text-[#0F172A]">
@@ -84,7 +84,7 @@ export function Process() {
     <section id="process" className="py-12 sm:py-20 lg:py-28 bg-[#F8FAFC] border-y border-[#CBD5E1]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-8 sm:mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">
+          <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
             Development Process
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
@@ -98,7 +98,7 @@ export function Process() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {PROCESS_STEPS.map((step) => (
             <div key={step.step} className="p-5 sm:p-7 bg-white border-2 border-[#CBD5E1] rounded-xl relative shadow-xs">
-              <span className="text-xs font-bold text-[#1D4ED8] uppercase tracking-wider bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-md inline-block mb-3 sm:mb-4">
+              <span className="text-xs font-bold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-2.5 py-1 rounded-md inline-block mb-3 sm:mb-4">
                 Step {step.step}
               </span>
               <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] mb-1.5 sm:mb-2">{step.title}</h3>
@@ -118,7 +118,7 @@ export function AboutAndTech() {
         {/* About Info */}
         <div className="lg:col-span-6 space-y-4 sm:space-y-6">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">
+            <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
               Background &amp; Focus
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
@@ -155,7 +155,7 @@ export function AboutAndTech() {
           
           <div className="space-y-5 sm:space-y-6 text-sm">
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
+              <h4 className="text-xs font-bold text-[#64748B] mb-2.5">
                 Frontend Development
               </h4>
               <div className="flex flex-wrap items-center gap-2">
@@ -168,7 +168,7 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
+              <h4 className="text-xs font-bold text-[#64748B] mb-2.5">
                 Backend &amp; API Layer
               </h4>
               <div className="flex flex-wrap items-center gap-2">
@@ -181,7 +181,7 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
+              <h4 className="text-xs font-bold text-[#64748B] mb-2.5">
                 Database Architecture
               </h4>
               <div className="flex flex-wrap items-center gap-2">
@@ -194,7 +194,7 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
+              <h4 className="text-xs font-bold text-[#64748B] mb-2.5">
                 Workflow &amp; Deployment
               </h4>
               <div className="flex flex-wrap items-center gap-2">

@@ -115,9 +115,10 @@ function SpotlightCard({ project }: { project: ProjectItem }) {
             </a>
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center justify-center px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-[#0F172A] bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#CBD5E1] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-[#0F172A] hover:text-[#1D4ED8] bg-white hover:bg-[#EFF6FF] border-2 border-[#CBD5E1] hover:border-[#1D4ED8] rounded-lg transition-all shadow-xs hover:shadow-sm group/btn"
             >
-              Details
+              <span>Details</span>
+              <span aria-hidden="true" className="group-hover/btn:translate-x-0.5 transition-transform">→</span>
             </Link>
           </div>
         </div>
@@ -132,7 +133,7 @@ export default function FeaturedWork() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-16 gap-3 sm:gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">
+            <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
               Portfolio Proof
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">

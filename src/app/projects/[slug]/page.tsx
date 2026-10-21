@@ -25,25 +25,25 @@ export default async function ProjectDetailPage({
   return (
     <div className="min-h-screen flex flex-col bg-[#F8FAFC]">
       <Navbar />
-      <main className="flex-grow py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
+      <main className="flex-grow py-8 sm:py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6 sm:mb-8">
           <Link
             href="/#work"
-            className="text-sm font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1"
+            className="text-xs sm:text-sm font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1"
           >
             ← Back to Featured Work
           </Link>
         </div>
 
-        <div className="bg-white border border-[#E2E8F0] rounded-xl p-8 space-y-8 shadow-xs">
+        <div className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-8 space-y-6 sm:space-y-8 shadow-xs">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full">
               {project.category}
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] mt-4">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] mt-3 sm:mt-4">
               {project.name}
             </h1>
-            <p className="text-lg text-[#475569] mt-2 leading-relaxed">
+            <p className="text-sm sm:text-lg text-[#475569] mt-2 leading-relaxed">
               {project.description}
             </p>
           </div>

@@ -19,9 +19,9 @@ export default function TechMarquee() {
   return (
     <div className="relative w-full overflow-hidden border-y border-[#CBD5E1] bg-white py-4 sm:py-5 shadow-xs">
       {/* Left gradient fade mask */}
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 sm:w-36 bg-gradient-to-r from-white via-white/80 to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent" />
       {/* Right gradient fade mask */}
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 sm:w-36 bg-gradient-to-l from-white via-white/80 to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent" />
 
       <div className="animate-marquee flex items-center gap-4 sm:gap-6">
         {list.map((item, idx) => (

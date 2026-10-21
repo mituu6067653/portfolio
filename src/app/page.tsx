@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TechMarquee from "@/components/TechMarquee";
 import FeaturedWork from "@/components/FeaturedWork";
 import { Services, Process, AboutAndTech } from "@/components/Sections";
 import Contact from "@/components/Contact";
@@ -23,6 +24,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <TechMarquee />
         <FeaturedWork />
         <Services />
         <Process />

@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center">
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center px-5 py-2 text-sm font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg transition-colors shadow-xs"
+            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-[#1D4ED8] hover:text-[#1E40AF] bg-[#EFF6FF] hover:bg-[#DBEAFE] border border-[#BFDBFE] rounded-lg transition-colors"
           >
             Start a Project
           </Link>

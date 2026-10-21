@@ -274,25 +274,25 @@ export default function FAQChatbot() {
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center gap-2 px-3.5 py-2.5 sm:px-5 sm:py-3 bg-[#0F172A] hover:bg-[#162033] text-white border border-slate-700/80 hover:border-blue-500/60 rounded-full shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95 group ${
+          className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2 bg-white/95 hover:bg-white text-slate-700 hover:text-slate-900 border border-[#CBD5E1] hover:border-[#94A3B8] rounded-full shadow-md transition-all duration-200 hover:shadow-lg active:scale-95 group font-sans ${
             isOpen ? "hidden sm:flex" : "flex"
           }`}
-          aria-label="Toggle FAQ Assistant"
+          aria-label={isOpen ? "Close FAQ Assistant" : "Open Quick FAQ Assistant"}
         >
-          <span className="relative flex h-2 sm:h-2.5 w-2 sm:w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 sm:h-2.5 w-2 sm:w-2.5 bg-emerald-500"></span>
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
           </span>
-          <span className="text-xs sm:text-sm font-semibold tracking-wide">
-            {isOpen ? "Close Assistant" : "Quick FAQ"}
+          <span className="text-xs font-semibold tracking-normal text-slate-700 group-hover:text-slate-900">
+            {isOpen ? "Close FAQ" : "Quick FAQ"}
           </span>
-          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-blue-600/20 group-hover:bg-blue-600 text-blue-400 group-hover:text-white flex items-center justify-center transition-colors">
+          <div className="w-5 h-5 rounded-full bg-slate-100 group-hover:bg-blue-50 text-slate-500 group-hover:text-blue-600 flex items-center justify-center transition-colors">
             {isOpen ? (
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
             )}

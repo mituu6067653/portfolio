@@ -20,15 +20,17 @@ export default function Hero() {
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
           <Link
             href="#work"
-            className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg shadow-md transition-all text-center"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg shadow-md transition-all text-center"
           >
-            View Selected Work
+            <span>View Selected Work</span>
+            <span aria-hidden="true">↓</span>
           </Link>
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-[#0F172A] bg-white hover:bg-[#F8FAFC] border-2 border-[#CBD5E1] rounded-lg transition-all text-center shadow-xs"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-[#0F172A] bg-white hover:bg-[#F8FAFC] border-2 border-[#CBD5E1] rounded-lg transition-all text-center shadow-xs"
           >
-            Start a Conversation →
+            <span>Start a Conversation</span>
+            <span aria-hidden="true">→</span>
           </Link>
         </div>
 

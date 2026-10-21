@@ -1,5 +1,29 @@
 import { SERVICES, PROCESS_STEPS, TECH_STACK } from "@/data/portfolio";
 
+const SERVICE_ICONS: Record<string, React.ReactNode> = {
+  "business-websites": (
+    <svg className="w-6 h-6 text-[#1D4ED8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    </svg>
+  ),
+  "custom-web-apps": (
+    <svg className="w-6 h-6 text-[#1D4ED8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+    </svg>
+  ),
+  "website-redesign": (
+    <svg className="w-6 h-6 text-[#1D4ED8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+    </svg>
+  ),
+  "bug-fixes-improvements": (
+    <svg className="w-6 h-6 text-[#1D4ED8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  ),
+};
+
 export function Services() {
   return (
     <section id="services" className="py-12 sm:py-20 lg:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,12 +45,18 @@ export function Services() {
             key={service.id}
             className="high-contrast-card rounded-xl p-5 sm:p-8 bg-white flex flex-col justify-between"
           >
-            <div>
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] text-[#1D4ED8] flex items-center justify-center font-bold text-base sm:text-lg mb-4 sm:mb-6">
-                {service.title.charAt(0)}
+            <div className="flex-grow flex flex-col">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center mb-4 sm:mb-6 shrink-0">
+                {SERVICE_ICONS[service.id] || (
+                  <span className="text-[#1D4ED8] font-bold text-lg">⚡</span>
+                )}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-2 sm:mb-3">{service.title}</h3>
-              <p className="text-sm sm:text-base text-[#334155] leading-relaxed mb-4 sm:mb-6 font-normal">{service.description}</p>
+              <div className="min-h-[6.5rem] sm:min-h-[8.5rem] flex flex-col justify-start">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-2 sm:mb-3">{service.title}</h3>
+                <p className="text-sm sm:text-base text-[#334155] leading-relaxed font-normal">
+                  {service.description}
+                </p>
+              </div>
             </div>
 
             <div className="pt-4 sm:pt-6 border-t border-[#CBD5E1]">
@@ -103,28 +133,34 @@ export function AboutAndTech() {
             My primary goal is to deliver clean, functional code that solves operational problems—from scheduling platforms to real-estate CRMs.
           </p>
           
-          <div className="p-4 sm:p-6 bg-[#EFF6FF] border-2 border-[#BFDBFE] rounded-xl space-y-1.5 sm:space-y-2">
-            <h4 className="text-sm sm:text-base font-bold text-[#0F172A]">Development Philosophy</h4>
+          {/* Aligned Callout Box */}
+          <div className="p-5 sm:p-6 bg-[#EFF6FF] border border-[#BFDBFE] border-l-4 border-l-[#1D4ED8] rounded-r-xl rounded-l-xs space-y-1.5 sm:space-y-2">
+            <h3 className="text-sm sm:text-base font-bold text-[#0F172A]">Development Philosophy</h3>
             <p className="text-xs sm:text-sm text-[#1E3A8A] font-semibold leading-relaxed">
-              "Simple is intentional. Every line of code and interface element must serve a clear user goal or business result."
+              &ldquo;Simple is intentional. Every line of code and interface element must serve a clear user goal or business result.&rdquo;
             </p>
           </div>
         </div>
 
         {/* Tech Stack */}
-        <div className="lg:col-span-6 high-contrast-card rounded-xl p-5 sm:p-8 bg-white space-y-5 sm:space-y-6">
-          <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] border-b border-[#CBD5E1] pb-3 sm:pb-4">
-            Technical Capabilities
-          </h3>
+        <div className="lg:col-span-6 high-contrast-card rounded-xl p-6 sm:p-8 bg-white space-y-6 sm:space-y-7">
+          <div className="border-b border-[#CBD5E1] pb-3 sm:pb-4 flex items-center justify-between">
+            <h3 className="text-lg sm:text-xl font-bold text-[#0F172A]">
+              Technical Capabilities
+            </h3>
+            <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-2.5 py-0.5 rounded-full">
+              Production Stack
+            </span>
+          </div>
           
           <div className="space-y-5 sm:space-y-6 text-sm">
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2 sm:mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
                 Frontend Development
               </h4>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {TECH_STACK.frontend.map((t) => (
-                  <span key={t} className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#F1F5F9] border border-[#CBD5E1] rounded-md text-[11px] sm:text-xs font-bold text-[#0F172A]">
+                  <span key={t} className="inline-flex items-center whitespace-nowrap px-3 py-1.5 bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#CBD5E1] rounded-md text-xs font-semibold text-[#0F172A] transition-colors">
                     {t}
                   </span>
                 ))}
@@ -132,12 +168,12 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2 sm:mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
                 Backend &amp; API Layer
               </h4>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {TECH_STACK.backend.map((t) => (
-                  <span key={t} className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#F1F5F9] border border-[#CBD5E1] rounded-md text-[11px] sm:text-xs font-bold text-[#0F172A]">
+                  <span key={t} className="inline-flex items-center whitespace-nowrap px-3 py-1.5 bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#CBD5E1] rounded-md text-xs font-semibold text-[#0F172A] transition-colors">
                     {t}
                   </span>
                 ))}
@@ -145,12 +181,12 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2 sm:mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
                 Database Architecture
               </h4>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {TECH_STACK.database.map((t) => (
-                  <span key={t} className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#F1F5F9] border border-[#CBD5E1] rounded-md text-[11px] sm:text-xs font-bold text-[#0F172A]">
+                  <span key={t} className="inline-flex items-center whitespace-nowrap px-3 py-1.5 bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#CBD5E1] rounded-md text-xs font-semibold text-[#0F172A] transition-colors">
                     {t}
                   </span>
                 ))}
@@ -158,12 +194,12 @@ export function AboutAndTech() {
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2 sm:mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-2.5">
                 Workflow &amp; Deployment
               </h4>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {TECH_STACK.workflow.map((t) => (
-                  <span key={t} className="px-2.5 sm:px-3.5 py-1 sm:py-1.5 bg-[#F1F5F9] border border-[#CBD5E1] rounded-md text-[11px] sm:text-xs font-bold text-[#0F172A]">
+                  <span key={t} className="inline-flex items-center whitespace-nowrap px-3 py-1.5 bg-[#F1F5F9] hover:bg-[#E2E8F0] border border-[#CBD5E1] rounded-md text-xs font-semibold text-[#0F172A] transition-colors">
                     {t}
                   </span>
                 ))}

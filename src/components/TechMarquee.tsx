@@ -1,16 +1,15 @@
 export default function TechMarquee() {
   const marqueeItems = [
-    { label: "Next.js 16 (App Router)", icon: "⚡" },
+    { label: "Next.js (App Router)", icon: "⚡" },
     { label: "React & TypeScript", icon: "⚛️" },
     { label: "PostgreSQL & Supabase", icon: "🐘" },
-    { label: "Node.js REST & Server Actions", icon: "🟢" },
-    { label: "Custom Business CRMs", icon: "💼" },
-    { label: "Tailwind CSS & Modern UX", icon: "🎨" },
+    { label: "Node.js & REST APIs", icon: "🟢" },
+    { label: "Tailwind CSS", icon: "🎨" },
     { label: "Prisma ORM", icon: "📦" },
-    { label: "Full-Stack Web Applications", icon: "🚀" },
-    { label: "Vercel & Cloud CI/CD", icon: "☁️" },
-    { label: "Enterprise RBAC Security", icon: "🛡️" },
-    { label: "Real-time Operations Systems", icon: "📊" }
+    { label: "Custom Business Dashboards", icon: "💼" },
+    { label: "Vercel & Git CI/CD", icon: "☁️" },
+    { label: "Authentication & Role Security", icon: "🛡️" },
+    { label: "Internal Operations Tools", icon: "📊" }
   ];
 
   // Duplicate items for continuous seamless loop

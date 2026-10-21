@@ -93,11 +93,11 @@ function SpotlightCard({ project }: { project: ProjectItem }) {
           <div className="space-y-2.5">
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-[#64748B] bg-[#F8FAFC] border border-[#CBD5E1] px-2.5 py-0.5 rounded-full">
-                Capability
+                The Solution
               </span>
             </div>
             <h4 className="text-base sm:text-lg font-bold text-[#0F172A]">
-              Key Functionality
+              How It Works
             </h4>
             <p className="text-xs sm:text-sm text-[#334155] font-medium leading-relaxed">
               {project.solution}
@@ -134,14 +134,14 @@ export default function FeaturedWork() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-16 gap-3 sm:gap-4">
           <div>
             <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
-              Portfolio Proof
+              Recent Work
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
               Featured Web Applications
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#334155] font-medium max-w-sm">
-            Functional, deployed full-stack software built for real business workflows.
+            Live full-stack projects built to solve real operational bottlenecks.
           </p>
         </div>
 

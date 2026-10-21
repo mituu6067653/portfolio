@@ -29,13 +29,13 @@ export function Services() {
     <section id="services" className="py-12 sm:py-20 lg:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mb-8 sm:mb-14">
         <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
-          Capabilities
+          Services
         </span>
         <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
-          Development Services
+          Services &amp; How I Can Help
         </h2>
         <p className="mt-2 text-base sm:text-lg text-[#334155] font-medium leading-relaxed">
-          Direct, practical full-stack development focused on business performance.
+          From fast business websites to custom web tools built to fix daily operational headaches.
         </p>
       </div>
 
@@ -61,7 +61,7 @@ export function Services() {
 
             <div className="pt-4 sm:pt-6 border-t border-[#CBD5E1]">
               <h4 className="text-xs font-bold text-[#64748B] mb-2 sm:mb-3">
-                Expected Outcomes
+                What You Get
               </h4>
               <ul className="space-y-2 text-sm sm:text-base font-semibold text-[#0F172A]">
                 {service.outcomes.map((outcome) => (
@@ -85,13 +85,13 @@ export function Process() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-8 sm:mb-14">
           <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
-            Development Process
+            My Process
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
-            How I Build Software
+            How We Work Together
           </h2>
           <p className="mt-2 text-base sm:text-lg text-[#334155] font-medium leading-relaxed">
-            A reliable 4-step execution process designed for speed and clarity.
+            A clear, predictable roadmap from our initial chat all the way to production launch.
           </p>
         </div>
 
@@ -119,25 +119,25 @@ export function AboutAndTech() {
         <div className="lg:col-span-6 space-y-4 sm:space-y-6">
           <div>
             <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full inline-block mb-2">
-              Background &amp; Focus
+              About Me
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight mt-1">
-              About Meet Bhandari
+              A Bit About Who I Am
             </h2>
           </div>
           
           <p className="text-sm sm:text-lg text-[#334155] leading-relaxed font-normal">
-            I am a Full-Stack Web Developer pursuing my B.Voc. in Software Development (5th semester) in India. I specialize in building high-performance web applications and operations management systems for business clients.
+            I&apos;m a full-stack developer based in India, currently in my 5th semester of B.Voc. in Software Development. I love turning manual, messy business tasks into snappy, reliable web applications.
           </p>
           <p className="text-sm sm:text-lg text-[#334155] leading-relaxed font-normal">
-            My primary goal is to deliver clean, functional code that solves operational problems—from scheduling platforms to real-estate CRMs.
+            Over the past couple of years, I&apos;ve built field job dispatchers, real estate CRMs, and manufacturing tracking systems. My focus is always on writing clean code and building user interfaces that team members can pick up on day one without needing a manual.
           </p>
           
           {/* Aligned Callout Box */}
           <div className="p-5 sm:p-6 bg-[#EFF6FF] border border-[#BFDBFE] border-l-4 border-l-[#1D4ED8] rounded-r-xl rounded-l-xs space-y-1.5 sm:space-y-2">
-            <h3 className="text-sm sm:text-base font-bold text-[#0F172A]">Development Philosophy</h3>
+            <h3 className="text-sm sm:text-base font-bold text-[#0F172A]">My Approach</h3>
             <p className="text-xs sm:text-sm text-[#1E3A8A] font-semibold leading-relaxed">
-              &ldquo;Simple is intentional. Every line of code and interface element must serve a clear user goal or business result.&rdquo;
+              &ldquo;The best code is simple and readable. I don&apos;t build overly complex architectures when a straightforward, fast solution gets the job done better.&rdquo;
             </p>
           </div>
         </div>
@@ -146,10 +146,10 @@ export function AboutAndTech() {
         <div className="lg:col-span-6 high-contrast-card rounded-xl p-6 sm:p-8 bg-white space-y-6 sm:space-y-7">
           <div className="border-b border-[#CBD5E1] pb-3 sm:pb-4 flex items-center justify-between">
             <h3 className="text-lg sm:text-xl font-bold text-[#0F172A]">
-              Technical Capabilities
+              Skills &amp; Technologies
             </h3>
             <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-2.5 py-0.5 rounded-full">
-              Production Stack
+              Tools I Use Daily
             </span>
           </div>
           

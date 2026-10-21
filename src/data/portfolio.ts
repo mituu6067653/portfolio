@@ -25,15 +25,15 @@ export const PROJECTS: Project[] = [
   {
     slug: "serviceflow",
     name: "ServiceFlow",
-    category: "Job Management Platform",
-    description: "End-to-end service business management software for handling work orders, technician dispatching, and invoicing.",
-    problem: "Field service businesses struggle with lost work orders, unorganized scheduling, and slow payment collection cycles.",
-    solution: "Built a centralized dashboard for real-time job dispatching, automated status updates, and digital invoice generation.",
+    category: "Field Service Platform",
+    description: "A complete management web app built for service businesses to schedule jobs, track field technicians, and handle digital invoicing.",
+    problem: "Most service businesses still rely on paper work orders and scattered WhatsApp chats, leading to lost job details, late technician arrivals, and delayed payments.",
+    solution: "Created an all-in-one web dashboard where dispatchers assign jobs in seconds, monitor live technician updates, and send digital invoices straight to clients.",
     features: [
-      "Real-time Job Dispatch & Scheduling",
-      "Technician Status & Activity Tracking",
-      "Automated Client Notifications",
-      "Digital Invoicing & Payment Links"
+      "Real-time Job Dispatch & Calendar Scheduling",
+      "Field Technician Status & Live Activity Tracking",
+      "Automated Client SMS & Email Updates",
+      "One-Click Digital Invoicing & Payment Links"
     ],
     technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
     liveUrl: "https://service-job-managemnet.vercel.app/login",
@@ -43,15 +43,15 @@ export const PROJECTS: Project[] = [
   {
     slug: "propertyflow-crm",
     name: "PropertyFlow CRM",
-    category: "Real-Estate CRM & Portal",
-    description: "Lead management and property workflow system for real-estate agencies and security administrators.",
-    problem: "Real-estate teams miss opportunities due to unorganized buyer leads, scattered property listings, and manual follow-ups.",
-    solution: "Created a modern lead-pipeline CRM with property inventory management and automated lead assignment rules.",
+    category: "Real Estate CRM & Portal",
+    description: "A tailored lead management and property pipeline tool for real estate brokers and agency teams.",
+    problem: "Real estate agents frequently lose high-intent buyer inquiries because leads sit forgotten in personal inboxes and messy spreadsheets.",
+    solution: "Built a clean Kanban pipeline CRM that automatically routes incoming leads to the right agent, logs customer interactions, and connects buyers to matching properties.",
     features: [
-      "Visual Lead Pipeline & Status Tracking",
-      "Property Inventory & Listing Management",
-      "Role-based Access & Security Controls",
-      "Activity Logging & Contact Records"
+      "Visual Lead Pipeline with Drag-and-Drop Stages",
+      "Property Inventory Catalog with Quick Filters",
+      "Role-Based Access for Agents & Admins",
+      "Client Call Logs & Follow-up Reminders"
     ],
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Prisma"],
     liveUrl: "https://land-crm-snowy.vercel.app/dashboard",
@@ -61,15 +61,15 @@ export const PROJECTS: Project[] = [
   {
     slug: "manufacturing-system",
     name: "Manufacturing Business System",
-    category: "Enterprise Operations Demo",
-    description: "All-in-one operations system covering sales orders, production tracking, inventory levels, quality control, and dispatch.",
-    problem: "Small-to-mid manufacturing facilities operate on disconnected spreadsheets, causing stockouts and production delays.",
-    solution: "Designed a unified enterprise workspace linking sales orders directly to material requirements, quality checks, and dispatch documentation.",
+    category: "Operations & Inventory Portal",
+    description: "A full shop-floor operations system tracking customer orders, raw material stock, quality checkpoints, and dispatch slips.",
+    problem: "Small manufacturing units often face production delays and stock shortages because sales, inventory, and packaging departments don't share real-time data.",
+    solution: "Developed an integrated portal that automatically updates material requirements as orders come in, enforces quality inspection checks, and generates ready-to-print dispatch documents.",
     features: [
-      "Sales Order to Production Conversion",
-      "Live Inventory & Material Stock Tracking",
-      "Quality Inspection Checkpoints",
-      "Dispatch Documentation & Invoice Ready Views"
+      "Direct Conversion of Sales Orders to Production Jobs",
+      "Live Stock Tracking with Low-Inventory Alerts",
+      "Stage-by-Stage Quality Inspection Checklists",
+      "Dispatch Packing Slips & Commercial Invoice Views"
     ],
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "https://manufacturing-system-three.vercel.app/",
@@ -82,48 +82,48 @@ export const SERVICES: Service[] = [
   {
     id: "business-websites",
     title: "Business Websites",
-    description: "High-performance, editorial, responsive websites built to communicate clear positioning and turn visitors into client inquiries.",
+    description: "Clean, fast-loading websites built to clearly present your services, build credibility, and convert visitors into real inquiries.",
     outcomes: [
-      "Lightning-fast load speed",
-      "Responsive across all devices",
-      "Clear positioning & direct copy",
-      "SEO optimized metadata"
+      "Fast load times on both mobile and desktop",
+      "Fully responsive layout tailored for all screens",
+      "Straightforward copy and intuitive layout",
+      "Search-engine-ready structure & meta tags"
     ],
     icon: "globe"
   },
   {
     id: "custom-web-apps",
     title: "Custom Web Applications",
-    description: "Tailored dashboards, CRMs, and operational workflow software built to streamline core business tasks.",
+    description: "Tailored dashboards, internal tools, and customer portals built around the exact way your business operates.",
     outcomes: [
-      "Intuitive workflow design",
-      "Secure data handling",
-      "Role-based access",
-      "Scalable database architecture"
+      "Simple, easy-to-use user interfaces",
+      "Protected authentication & role permissions",
+      "Reliable database design that scales cleanly",
+      "Seamless integration with third-party APIs"
     ],
     icon: "app"
   },
   {
     id: "website-redesign",
-    title: "Website Redesign",
-    description: "Modernizing outdated applications and web pages with clean typography, responsive layouts, and improved UX.",
+    title: "Website Redesign & Upgrades",
+    description: "Giving outdated or slow websites a modern look and feel—improving visual polish, readability, and mobile responsiveness.",
     outcomes: [
-      "Clean visual structure",
-      "Mobile-first design pass",
-      "Modern design system",
-      "Elimination of visual clutter"
+      "Modern, polished visual identity",
+      "Mobile-friendly navigation and typography",
+      "Substantially faster page load times",
+      "Clean, maintainable frontend codebase"
     ],
     icon: "refresh"
   },
   {
     id: "bug-fixes-improvements",
-    title: "Bug Fixes & Improvements",
-    description: "Resolving complex full-stack issues, optimizing performance bottlenecks, and adding features to existing codebases.",
+    title: "Bug Fixes & Technical Improvements",
+    description: "Tracking down stubborn bugs, optimizing sluggish queries, and adding new features to your existing web projects.",
     outcomes: [
-      "Strict root-cause debugging",
-      "Code cleanups & refactoring",
-      "Performance optimization",
-      "Reliable API integrations"
+      "Direct root-cause fixes without hacky workarounds",
+      "Frontend & database speed optimizations",
+      "Clean code refactoring for easier maintenance",
+      "Reliable API and third-party webhook fixes"
     ],
     icon: "wrench"
   }
@@ -132,23 +132,23 @@ export const SERVICES: Service[] = [
 export const PROCESS_STEPS = [
   {
     step: "01",
-    title: "Understand",
-    description: "Clarifying business goals, target audience, and core functional requirements before writing any code."
+    title: "Understand & Scope",
+    description: "We talk through what you're trying to build, who will use it, and list out the exact features you need."
   },
   {
     step: "02",
-    title: "Plan",
-    description: "Defining data architecture, key user flows, visual system tokens, and precise milestones."
+    title: "Plan & Structure",
+    description: "I map out the user flows, database models, and page layouts before writing the first line of code."
   },
   {
     step: "03",
-    title: "Build",
-    description: "Developing clean, performant frontend and backend systems with continuous responsive QA."
+    title: "Build & Review",
+    description: "I develop the frontend and backend iteratively, sharing live preview links so you can test as we go."
   },
   {
     step: "04",
-    title: "Launch",
-    description: "Deploying to production, auditing speed/accessibility, and ensuring effortless operational handoff."
+    title: "Launch & Support",
+    description: "We deploy to production, verify speed and mobile responsiveness, and I make sure you're confident using it."
   }
 ];
 

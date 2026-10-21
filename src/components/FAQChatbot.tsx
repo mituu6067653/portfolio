@@ -10,12 +10,12 @@ interface FAQItem {
 }
 
 const FAQ_CATEGORIES = [
-  { id: "all", label: "✨ All Topics" },
-  { id: "services", label: "🚀 Services" },
-  { id: "pricing", label: "💰 Pricing" },
-  { id: "timeline", label: "⏱️ Timeline" },
-  { id: "tech", label: "🛠️ Tech Stack" },
-  { id: "hiring", label: "🤝 Work With Me" },
+  { id: "all", label: "All Topics" },
+  { id: "services", label: "Services" },
+  { id: "pricing", label: "Pricing" },
+  { id: "timeline", label: "Timeline" },
+  { id: "tech", label: "Tech Stack" },
+  { id: "hiring", label: "Hiring & Availability" },
 ] as const;
 
 const FAQ_QUESTIONS: FAQItem[] = [
@@ -23,61 +23,61 @@ const FAQ_QUESTIONS: FAQItem[] = [
     id: "services-list",
     category: "services",
     question: "What services do you provide?",
-    answer: "⚡ I provide 4 core services:\n\n1. Custom Full-Stack Web Apps & CRMs\n2. High-Performance Business Websites\n3. Website Redesign & Modern UI/UX\n4. Bug Fixes, Optimizations & API Integration"
+    answer: "I specialize in two main areas:\n\n1. Custom web applications & internal tools (like CRMs, booking portals, and dispatch systems).\n2. Fast, clean business websites for companies that want a strong online presence.\n\nI also take on redesigns of outdated web apps and urgent bug fixes for existing React/Next.js codebases."
   },
   {
     id: "services-redesign",
     category: "services",
     question: "Can you redesign or upgrade my existing site?",
-    answer: "🎨 Yes, absolutely! I take legacy or slow websites and rebuild them using modern Next.js, responsive layouts, high-contrast typography, and smooth UX."
+    answer: "Yes. If your current site is sluggish, hard to navigate on mobile, or looks dated, I can rebuild it with clean Next.js and Tailwind CSS while keeping your existing brand assets and content intact."
   },
   {
     id: "pricing-cost",
     category: "pricing",
     question: "What are your project costs & rates?",
-    answer: "💰 Transparent Milestone Pricing:\n\n• Business Websites: Fixed budget based on number of pages & scope\n• Custom Web Apps / CRMs: Milestone-based payments tied to deliverables\n• Bug Fixes & Small Tasks: Quick fixed-fee quotes\n\nNo hidden costs. You only pay as milestones are completed!"
+    answer: "I quote based on clear scope rather than vague hourly estimates:\n\n• Business Websites: Fixed price based on number of pages and design requirements.\n• Custom Web Apps / Dashboards: Broken down into milestone payments tied to specific deliverables.\n• Bug Fixes & Small Tweaks: Flat fee with guaranteed delivery.\n\nDrop a quick note in the contact form with what you need, and I'll send over an honest estimate."
   },
   {
     id: "pricing-payment",
     category: "pricing",
     question: "How do milestone payments work?",
-    answer: "🔒 Safe & Transparent:\n\n1. Initial deposit (25-30%) to start architecture & design\n2. Progress milestones for frontend & backend completion\n3. Final balance upon your testing & live deployment."
+    answer: "For larger projects, payments are split into clear milestones:\n\n1. A 25–30% initial deposit to begin wireframing and architecture.\n2. Progress payments as frontend and backend features are delivered for your review.\n3. The final balance once everything is tested and deployed live."
   },
   {
     id: "timeline-duration",
     category: "timeline",
     question: "How long does a project take?",
-    answer: "⏱️ Typical Delivery Times:\n\n• Landing Pages & Business Sites: 5–10 business days\n• Full-Stack Web Apps & CRMs: 2–4 weeks\n• Urgent Bug Fixes & Edits: 24–48 hours"
+    answer: "It depends on the project scope:\n\n• Standard business website: Usually 1 to 2 weeks.\n• Custom web app or CRM: Typically 3 to 5 weeks depending on feature complexity.\n• Small bug fixes or updates: Usually completed within 24 to 48 hours."
   },
   {
     id: "timeline-urgent",
     category: "timeline",
     question: "Can you handle urgent or fast-turnaround jobs?",
-    answer: "⚡ Yes! If you have an urgent deadline or a broken production issue, let me know in the inquiry form and I can prioritize rapid turnaround."
+    answer: "Yes. If you have an urgent deadline or a production bug that needs immediate fixing, mention that in your message and I can prioritize it."
   },
   {
     id: "tech-frameworks",
     category: "tech",
     question: "What tech stack do you build with?",
-    answer: "🛠️ Modern & Scalable Production Stack:\n\n• Frontend: Next.js (App Router), React, TypeScript, Tailwind CSS\n• Backend: Node.js, Next API Routes, Server Actions\n• Databases: PostgreSQL, Prisma ORM, Supabase\n• Deployments: Vercel, Cloudflare, GitHub CI/CD"
+    answer: "My go-to production stack:\n\n• Frontend: Next.js (App Router), React, TypeScript, and Tailwind CSS.\n• Backend: Node.js, Next API routes, and Server Actions.\n• Database: PostgreSQL with Prisma ORM.\n• Hosting: Vercel for fast global edge deployment."
   },
   {
     id: "tech-custom",
     category: "tech",
     question: "Can you build custom business workflows?",
-    answer: "⚙️ 100%! I specialize in custom dashboards, role-based access, inventory tracking, dispatch systems, and internal SaaS tools tailored to your exact business logic."
+    answer: "Yes, that's actually my main focus. I've built field technician dispatchers, real estate lead pipelines, and factory inventory portals. Whatever custom logic your business runs on, we can map it into an intuitive web interface."
   },
   {
     id: "hiring-available",
     category: "hiring",
     question: "Are you available for work right now?",
-    answer: "🟢 Yes! I am currently accepting new freelance contracts, client builds, and consulting projects."
+    answer: "Yes, I'm currently open for new freelance contracts and client projects. Feel free to reach out via the contact form or email me directly at meetbhandaridev@gmail.com."
   },
   {
     id: "hiring-start",
     category: "hiring",
     question: "How do we get started on my project?",
-    answer: "🚀 It's super simple:\n\n1. Fill out the contact form below or email me directly.\n2. We discuss your requirements & timelines.\n3. I give you a clear proposal, milestones, and start building immediately!"
+    answer: "The process is simple:\n\n1. Send me a quick overview through the contact form or email.\n2. We'll clarify the exact features, timelines, and budget.\n3. Once we agree on milestones, I start building and share live staging links as we progress."
   }
 ];
 
@@ -87,7 +87,7 @@ export default function FAQChatbot() {
   const [messages, setMessages] = useState<Array<{ sender: "bot" | "user"; text: string }>>([
     {
       sender: "bot",
-      text: "👋 Hi! I'm Meet's interactive portfolio assistant.\n\nChoose any topic or question below to get instant answers without typing!"
+      text: "Hi! I put together quick answers to common questions about my pricing, timelines, tech stack, and availability.\n\nTap any question below to read more:"
     }
   ]);
 
@@ -151,10 +151,10 @@ export default function FAQChatbot() {
                 <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 ring-2 ring-[#0F172A]" />
               </div>
               <div>
-                <h3 className="font-semibold text-xs sm:text-sm text-white tracking-tight">Instant FAQ Assistant</h3>
+                <h3 className="font-semibold text-xs sm:text-sm text-white tracking-tight">Meet&apos;s Quick FAQ</h3>
                 <p className="text-[10px] sm:text-[11px] text-emerald-400 font-medium flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  Online &bull; Instant Answers
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  Frequently Asked Questions
                 </p>
               </div>
             </div>
@@ -190,8 +190,8 @@ export default function FAQChatbot() {
                 className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"} items-start gap-2 sm:gap-2.5`}
               >
                 {msg.sender === "bot" && (
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 text-[11px] sm:text-xs mt-0.5">
-                    🤖
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold shrink-0 text-[10px] sm:text-xs mt-0.5">
+                    MB
                   </div>
                 )}
                 <div

@@ -6,15 +6,15 @@ export default function Hero() {
       <div className="max-w-3xl space-y-6 sm:space-y-8">
         <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#EFF6FF] text-[#1D4ED8] border border-[#BFDBFE] max-w-full">
           <span className="w-2.5 h-2.5 rounded-full bg-[#16A34A] shrink-0"></span>
-          <span className="truncate">Available for selected freelance projects</span>
+          <span className="truncate">Available for freelance projects &amp; contracts</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-[1.2] sm:leading-[1.15]">
-          I build modern web applications &amp; custom software for businesses.
+          I build custom web applications &amp; fast websites for businesses.
         </h1>
 
         <p className="text-base sm:text-xl text-[#334155] leading-relaxed max-w-2xl font-medium">
-          Full-Stack Web Developer. I build fast business websites, workflow-driven management platforms, and custom CRMs designed for real operational clarity.
+          Hi, I&apos;m Meet. I&apos;m a full-stack developer who builds clean business websites, internal dashboards, and custom software that solve daily operational headaches.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">

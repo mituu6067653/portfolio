@@ -36,7 +36,7 @@ export default function Contact() {
           email: formData.email,
           projectType: formData.projectType,
           message: formData.message,
-          _subject: `🚨 [HIGH PRIORITY CLIENT LEAD] ${formData.name} (${formData.projectType})`,
+          _subject: `Portfolio Inquiry: ${formData.name} (${formData.projectType})`,
           _template: "table",
           _captcha: "false"
         })
@@ -65,10 +65,10 @@ export default function Contact() {
             Get in Touch
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-            Have a project in mind? Let's talk.
+            Have a project in mind? Let&apos;s talk.
           </h2>
           <p className="text-sm sm:text-lg text-[#334155] font-medium max-w-lg mx-auto leading-relaxed">
-            Fill out the form below to share project details, requirements, or timelines. I'll get back to you with next steps.
+            Whether you need a custom web application, a modern business website, or want to improve an existing codebase, drop me a line below.
           </p>
         </div>
 
@@ -168,7 +168,7 @@ export default function Contact() {
                 disabled={status === "submitting"}
                 className="w-full inline-flex items-center justify-center px-5 py-3 sm:py-4 text-sm sm:text-base font-bold text-white bg-[#1D4ED8] hover:bg-[#1E40AF] rounded-lg transition-all disabled:opacity-50 shadow-md cursor-pointer"
               >
-                {status === "submitting" ? "SENDING MESSAGE..." : "SEND PROJECT INQUIRY →"}
+                {status === "submitting" ? "Sending Message..." : "Send Message →"}
               </button>
 
               <div className="text-center pt-2">

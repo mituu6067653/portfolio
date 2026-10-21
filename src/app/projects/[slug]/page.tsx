@@ -37,7 +37,7 @@ export default async function ProjectDetailPage({
 
         <div className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-8 space-y-6 sm:space-y-8 shadow-xs">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full">
+            <span className="text-xs font-semibold text-[#1D4ED8] bg-[#EFF6FF] border border-[#BFDBFE] px-3 py-1 rounded-full">
               {project.category}
             </span>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] mt-3 sm:mt-4">
@@ -50,28 +50,28 @@ export default async function ProjectDetailPage({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-[#E2E8F0]">
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-2">
-                Problem Addressed
+              <h2 className="text-sm font-bold text-[#475569] mb-2">
+                The Challenge
               </h2>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <p className="text-sm text-[#334155] leading-relaxed font-normal">
                 {project.problem}
               </p>
             </div>
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-2">
-                Solution Implemented
+              <h2 className="text-sm font-bold text-[#475569] mb-2">
+                How I Solved It
               </h2>
-              <p className="text-sm text-[#475569] leading-relaxed">
+              <p className="text-sm text-[#334155] leading-relaxed font-normal">
                 {project.solution}
               </p>
             </div>
           </div>
 
           <div className="pt-6 border-t border-[#E2E8F0]">
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-4">
-              Core Capabilities & Features
+            <h2 className="text-sm font-bold text-[#475569] mb-3">
+              Key Features
             </h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#0F172A]">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#0F172A] font-medium">
               {project.features.map((feature) => (
                 <li key={feature} className="flex items-center gap-2">
                   <span className="text-[#16A34A] font-bold">✓</span> {feature}
@@ -81,8 +81,8 @@ export default async function ProjectDetailPage({
           </div>
 
           <div className="pt-6 border-t border-[#E2E8F0]">
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-3">
-              Technologies Used
+            <h2 className="text-sm font-bold text-[#475569] mb-3">
+              Technologies &amp; Tools
             </h2>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (

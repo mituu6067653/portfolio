@@ -36,7 +36,7 @@ export default function Contact() {
           email: formData.email,
           projectType: formData.projectType,
           message: formData.message,
-          _subject: `New Portfolio Inquiry from ${formData.name} - [${formData.projectType}]`,
+          _subject: `🚨 [HIGH PRIORITY CLIENT LEAD] ${formData.name} (${formData.projectType})`,
           _template: "table",
           _captcha: "false"
         })
